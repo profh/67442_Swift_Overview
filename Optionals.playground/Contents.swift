@@ -10,17 +10,17 @@ print(age)
 
 // Unwrapping optionals by force
 //let msg = name + " is the captain of Serenity"
-let msg = name! + " is the captain of Serenity"
+//let msg = name! + " is the captain of Serenity"
 
 // Safely unwrapping optionals
 if let captain = name {
   // The value is not nil, use it with confidence
   let msg2 = captain + " is the captain of Serenity"
-  print(msg)
+  print(msg2)
 } else {
   // The value is nil
   let msg2 = "Don't know who is captain of Serenity"
-  print(msg)
+  print(msg2)
 }
 
 // Nil coalescing (very useful)
