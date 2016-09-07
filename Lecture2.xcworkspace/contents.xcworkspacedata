@@ -26,6 +26,9 @@
       location = "group:Optionals.playground">
    </FileRef>
    <FileRef
+      location = "group:Generics.playground">
+   </FileRef>
+   <FileRef
       location = "group:Closures.playground">
    </FileRef>
    <FileRef

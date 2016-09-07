@@ -1,7 +1,7 @@
 //: Optionals
 
-var name:String? = "Malcolm"
-var password:String? = "IloveInara"
+var name:String? //= "Malcolm"
+var password:String? //= "IloveInara"
 var age:Int?
 
 print(name)
