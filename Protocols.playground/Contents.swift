@@ -53,4 +53,4 @@ struct Kibble: Food {
 let catFood = Kibble()
 var dusty = Cat()
 
-dusty.eat(catFood, grams: 30)
+dusty.eat(food: catFood, grams: 30)

@@ -27,7 +27,7 @@ let authentication = (name: "malcolm", password: "IloveInara")
 
 
 // Calculated tuples: do the fizzbuzz problem in Swift
-func fizzbuzz(number number: Int) -> String {
+func fizzbuzz(number: Int) -> String {
   switch (number % 3 == 0, number % 5 == 0) {
   case (true, false):
     return "Fizz"

@@ -3,7 +3,7 @@
 func greet(name: String, day: String) -> String {
   return "Hello \(name), today is \(day)."
 }
-greet("Bob", day: "Tuesday")
+greet(name: "Bob", day: "Tuesday")
 
 //** Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number. **//
 func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
@@ -22,7 +22,7 @@ func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
   
   return (min, max, sum)
 }
-let statistics = calculateStatistics([5, 3, 100, 3, 9])
+let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
 print(statistics.sum)
 print(statistics.2)
 
@@ -36,7 +36,7 @@ func sumOf(numbers: Int...) -> Int {
   return sum
 }
 sumOf()
-sumOf(42, 597, 12, 100)
+sumOf(numbers: 42, 597, 12, 100)
 
 //** Functions can be nested. Nested functions have access to variables that were declared in the outer function. **//
 //** You can use nested functions to organize the code in a function that is long or complex. **//
@@ -51,7 +51,7 @@ func returnFifteen() -> Int {
 returnFifteen()
 
 //** Functions are a first-class type. This means that a function can return another function as its value. **//
-func makeIncrementer() -> (Int -> Int) {
+func makeIncrementer() -> ((Int) -> Int) {
   func addOne(number: Int) -> Int {
     return 1 + number
   }
@@ -67,7 +67,7 @@ func lessThanTen(number: Int) -> Bool {
   return number < 10
 }
 
-func hasAnyMatches(list: [Int], condition: Int -> Bool) -> Bool {
+func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
   for item in list {
     if condition(item) {
       return true
@@ -77,5 +77,5 @@ func hasAnyMatches(list: [Int], condition: Int -> Bool) -> Bool {
 }
 
 var numbers = [20, 19, 7, 12]
-hasAnyMatches(numbers, condition: lessThanTen)
+hasAnyMatches(list: numbers, condition: lessThanTen)
 

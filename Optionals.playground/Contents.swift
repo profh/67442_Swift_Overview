@@ -36,9 +36,9 @@ print(age ?? 0)
 
 //** Pattern matching with optionals **//
 switch (name, password) {
-  case let (.Some(name), .Some(password)):
+  case let (.some(name), .some(password)):
     print("Hello, \(name)")
-  case let (.Some(name), .None):
+  case let (.some(name), .none):
     print("Please enter a password.")
   default:
     print("Who are you?")
