@@ -52,13 +52,19 @@ for i in 0..<4 {
 }
 print(firstForLoop)
 
-//** traditional works too **//
-var secondForLoop = 0
+//** traditional no longer works (Swift 3) **//
+/* var secondForLoop = 0
 for var i = 0; i < 4; i += 1 {
   secondForLoop += i
 }
-print(secondForLoop)
+print(secondForLoop) */
 
+//** More complex for loops **//
+var secondForLoop = 0
+for i in stride(from: 1, to: 4, by: 1) {
+    secondForLoop += i
+}
+print(secondForLoop)
 
 //** While **//
 var n = 2

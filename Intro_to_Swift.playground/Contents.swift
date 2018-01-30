@@ -57,7 +57,7 @@ combinedList
 
 
 //** Mixed data types will work in playground, but not compile properly in project **//
-var pocketContents:[AnyObject] = ["lint", "keys", 3.14159, 42, true, "phone"]
+var pocketContents:[Any] = ["lint", "keys", 3.14159, 42, true, "phone"]
 pocketContents[0]
 pocketContents[3]
 
@@ -66,7 +66,7 @@ combinedList.removeLast()
 combinedList
 combinedList.removeAll()
 combinedList = shoppingList + hardwareStoreList
-combinedList.removeAtIndex(6)
+combinedList.remove(at:6)
 
 
 //** Dictionaries **//
@@ -79,13 +79,14 @@ occupations["Jayne"] = "Public Relations"
 occupations
 occupations["Kaylee"]
 
-occupations.removeValueForKey("Jayne")
+occupations.removeValue(forKey:"Jayne")
 occupations
 occupations.count
 occupations.isEmpty
 
-var people = occupations.keys  // LazyMapCollection
-people.first
+// var people = occupations.keys
+// LazyMapCollection
+// people.first
 // people.last
 // people[1]
 
@@ -128,11 +129,12 @@ print(user.crew[2])
 
 
 // multiple assignment
-var a = 1
-var b = 2
-var c = 3
+var (a, b, c) = (1, 2, 3)
+// Same as..
+// var a = 1
+// var b = 2
+// var c = 3
 
-//var (a, b, c) = (1, 2, 3)
 
 // reversing assignments
 (a, b) = (b, a)
